@@ -1,0 +1,7 @@
+C:\Users\jason\programacion\VisitorRegistrationSystem\VisitorRegistrationSystem.Web\obj\Debug\net6.0\VisitorRegistrationSystem.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\programacion\VisitorRegistrationSystem\VisitorRegistrationSystem.Web\obj\Debug\net6.0\VisitorRegistrationSystem.Web.AssemblyInfoInputs.cache
+C:\Users\jason\programacion\VisitorRegistrationSystem\VisitorRegistrationSystem.Web\obj\Debug\net6.0\VisitorRegistrationSystem.Web.AssemblyInfo.cs
+C:\Users\jason\programacion\VisitorRegistrationSystem\VisitorRegistrationSystem.Web\obj\Debug\net6.0\VisitorRegistrationSystem.Web.csproj.CoreCompileInputs.cache
+C:\Users\jason\programacion\VisitorRegistrationSystem\VisitorRegistrationSystem.Web\obj\Debug\net6.0\VisitorRegistrationSystem.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jason\programacion\VisitorRegistrationSystem\VisitorRegistrationSystem.Web\obj\Debug\net6.0\VisitorRegistrationSystem.Web.RazorAssemblyInfo.cache
+C:\Users\jason\programacion\VisitorRegistrationSystem\VisitorRegistrationSystem.Web\obj\Debug\net6.0\VisitorRegistrationSystem.Web.RazorAssemblyInfo.cs

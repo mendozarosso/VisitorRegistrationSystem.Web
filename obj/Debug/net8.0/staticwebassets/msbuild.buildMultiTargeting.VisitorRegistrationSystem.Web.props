@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VisitorRegistrationSystem.Web.props" />
+</Project>

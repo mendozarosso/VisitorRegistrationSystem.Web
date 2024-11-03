@@ -1,0 +1,75 @@
+﻿@page "/"
+@using Microsoft.EntityFrameworkCore
+@using VisitorRegistrationSystem.Web.Data
+@using VisitorRegistrationSystem.Web.Data.Models
+@inject ApplicationDbContext Context
+@inject NavigationManager NavigationManager
+
+
+
+<PageTitle>Registro de Visitantes</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center mb-0">Registro de Visitantes</h3>
+                </div>
+                <div class="card-body">
+                    // Este es el formulario principal que captura los datos del visitante
+                    <EditForm Model="@visitor" OnValidSubmit="@HandleValidSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group mb-3">
+                            <label for="phone">Teléfono:</label>
+                            <InputText id="phone" @bind-Value="visitor.Phone" class="form-control" />
+                            <ValidationMessage For="@(() => visitor.Phone)" class="text-danger" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="firstName">Nombre:</label>
+                            <InputText id="firstName" @bind-Value="visitor.FirstName" class="form-control" />
+                            <ValidationMessage For="@(() => visitor.FirstName)" class="text-danger" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="lastName">Apellido:</label>
+                            <InputText id="lastName" @bind-Value="visitor.LastName" class="form-control" />
+                            <ValidationMessage For="@(() => visitor.LastName)" class="text-danger" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="email">Correo electrónico:</label>
+                            <InputText id="email" @bind-Value="visitor.Email" class="form-control" />
+                            <ValidationMessage For="@(() => visitor.Email)" class="text-danger" />
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Registrar Visita</button>
+                            <a href="visitor-list" class="btn btn-secondary">Ver Lista de Visitantes</a>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Visitor visitor = new Visitor();
+
+    //Jason Mendoza 
+    //20231889
+
+    // Este método se ejecuta cuando el formulario es válido y guarda el visitante en la base de datos
+    private async Task HandleValidSubmit()
+    {
+        Context.Visitors.Add(visitor);
+        await Context.SaveChangesAsync();
+        visitor = new Visitor();
+    }
+}
